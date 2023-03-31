@@ -5,8 +5,8 @@ animationContainers.forEach(initContainer);
 
 function initContainer(container) {
     const grid = makeGrid(
-        container.dataset.gridRows,
-        container.dataset.gridCols,
+        container.dataset.gridRows ?? 10,
+        container.dataset.gridCols ?? 10,
         container.dataset.animStagger ?? .1
     );
     grid.style.backgroundColor = "transparent";
