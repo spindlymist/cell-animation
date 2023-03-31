@@ -1,0 +1,75 @@
+/****************************************************************************** 
+Generic
+******************************************************************************/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/****************************************************************************** 
+Animation
+******************************************************************************/
+
+.animation-container {
+    position: relative;
+
+    --anim-speed: 1s;
+    --initial-color: black;
+    --flash-color: white;
+}
+
+.animation-grid {
+    display: grid;
+    position: absolute;
+    inset: 0;
+
+    div {
+        background-color: var(--initial-color);
+        animation-duration: var(--anim-speed);
+        animation-delay: var(--anim-delay);
+        animation-fill-mode: both;
+        animation-name: flash;
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: var(--initial-color);
+    }
+    50% {
+        background-color: var(--flash-color);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/****************************************************************************** 
+UI
+******************************************************************************/
+
+.root {
+    display: flex;
+    min-height: 100vh;
+    column-gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.preview {
+    align-self: center;
+    height: 66.67vh;
+    width: 50%;
+}

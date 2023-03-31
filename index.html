@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">
+        <div class="animation-container"
+            data-grid-cols="10"
+            data-grid-rows="10"
+            data-anim-stagger="0.01"
+            style="--anim-speed: 4s; --initial-color: black; --flash-color: #fbae2f">
+            <img src="mandala.jpg">
+        </div>
+        <div class="animation-container"
+            data-grid-cols="32"
+            data-grid-rows="16"
+            data-anim-stagger="0.005"
+            style="--anim-speed: .25s; --initial-color: black; --flash-color: lime">
+            <img src="transistor.jpg">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
